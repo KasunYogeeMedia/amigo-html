@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+	<title>Amigo</title>
+
+</head>
+
+<body>
+	<div id="main-wrapper">
+
+		<div class="center-content">
+			<div id="header-wrapper">
+				<img id="logo-image" src="inc_files/images/logo.png" alt="logo-image" />
+			</div><!--header-wrapper end-->
+
+			<div id="content-wrapper">
+				<div id="green-color-line"></div>
+				<div id="text-wrapper">
+					<h3>Amigo, We are launching Soon</h3>
+					<p>We are currently working on an awesome new site,
+						won't be long. Please don't forget to check out our
+						tweets and to subscribe to be notified!</p>
+				</div>
+				<div id="counter">
+
+				</div>
+				<div id="search-box-wrapper">
+					<div id="search-box">
+						<form>
+							<input type="text" name="email-address"
+								value="Please enter your email for latest updates ..." id="email-hear" />
+							<input type="button" value="" id="button" />
+						</form>
+					</div>
+				</div>
+				<div id="contact-us">
+					<a href="#">
+						<p>CONTACT US</p>
+						<img id="contact-icon" src="inc_files/images/contact-icon.png" alt="contact-icon" />
+					</a>
+				</div>
+			</div><!--content-wrapper end-->
+		</div>
+
+		<div id="footer-wrapper">
+			<div id="footer-left">
+				<p>Amigo Coming Soon Template COPYRIGHT &copy; 2013 | Amigo</p>
+			</div>
+
+			<div id="footer-right">
+				<a href="#"><img src="inc_files/images/facebook-icon.png" alt="facebook-icon" /></a>
+				<a href="#"><img src="inc_files/images/twitter-icon.png" alt="twitter-icon" /></a>
+				<a href="#"><img src="inc_files/images/google-icon.png" alt="google-icon" /></a>
+				<a href="#"><img src="inc_files/images/linkdin-icon.png" alt="linkedin-icon" /></a>
+				<a href="#"><img src="inc_files/images/youtube-icon.png" alt="youtube-icon" /></a>
+			</div>
+		</div><!--footer-wrapper end-->
+
+	</div><!--main-wrapper-->
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<!-- Your custom scripts here -->
+	<script src="inc_files/jqfloat/jqfloat.min.js"></script>
+	<script src="inc_files/countdown-page/js/modernizr.custom.js"></script>
+	<script src="inc_files/countdown-page/js/jquery.countdown.js"></script>
+	<script src="inc_files/countdown-page/js/script.js"></script>
+	<script src="inc_files/jquery-backstretch-master/src/jquery.backstretch.js"></script>
+	<script>
+		$.backstretch([
+			"inc_files/images/banner1.jpg",
+			"inc_files/images/banner2.jpg",
+			"inc_files/images/banner1.jpg"
+		], {
+			fade: 750,
+			duration: 4000
+		});
+
+		$(document).ready(function () {
+			function widthx() {
+				var wx = $(window).width();
+				alert(wx);
+			}
+
+			$('.countDays, .countHours, .countMinutes, .countSeconds').jqFloat({
+				width: 0,
+				height: 60,
+				speed: 2000
+			});
+
+		});
+	</script>
+
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
