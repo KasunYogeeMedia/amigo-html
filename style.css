@@ -72,10 +72,17 @@ body {
 	width: 100%;
 
 }
+.center-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
 
 /*header-wrapper*/
 #header-wrapper {
-	width: 656px;
+	width: 100%;
 	height: 98px;
 	margin: 0 auto;
 }
@@ -89,13 +96,14 @@ body {
 
 /*content-wrapper*/
 #content-wrapper {
-	width: 656px;
+	width: 100%;
+	max-width: 656px;
 	margin: 0 auto;
 	overflow: hidden;
 }
 
 #green-color-line {
-	width: 648px;
+	width: 100%;
 	height: 4px;
 	margin: 0 auto;
 	background-color: #9DC500;
@@ -107,7 +115,7 @@ body {
 }
 
 #text-wrapper {
-	width: 656px;
+	width: 100%;
 	background-image: url(inc_files/images/black-transperant.png);
 	background-repeat: repeat x;
 	height: 292px;
@@ -132,13 +140,13 @@ body {
 	color: #fff;
 	font-size: 15px;
 	text-align: center;
-	width: 510px;
+	width: 100%;
 	margin: 45px auto 0 auto;
 }
 
 /*countdown*/
 #counter {
-	width: 647px;
+	width: 100%;
 	height: 110px;
 	margin: 0 auto;
 	position: relative;
@@ -217,7 +225,7 @@ body {
 
 /*countdown-end*/
 #search-box-wrapper {
-	width: 651px;
+	width: 100%;
 	height: 61px;
 	background-image: url(inc_files/images/search-box-bg.png);
 	background-repeat: repeat x;
@@ -230,7 +238,7 @@ body {
 }
 
 #search-box {
-	width: 646px;
+	width: 100%;
 	height: 56px;
 	background-color: #fff;
 	-moz-border-radius: 4px;
@@ -241,7 +249,7 @@ body {
 
 #email-hear {
 	border: 0px;
-	width: 572px;
+	width: 100%;
 	height: 50px;
 	margin: 3px 0 0 25px;
 	font-family: 'Oswald', sans-serif;
@@ -255,7 +263,7 @@ body {
 }
 
 #button {
-	width: 34px;
+	width: 100%;
 	height: 34px;
 	background-image: url(inc_files/images/plus-icon.png);
 	background-repeat: no-repeat;
@@ -267,7 +275,7 @@ body {
 }
 
 #contact-us {
-	width: 122px;
+	width: 100%;
 	height: 23px;
 	float: right;
 }
@@ -314,9 +322,9 @@ body {
 	top: -12px;
 }
 
-.center-content {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
+@media only screen and (max-width: 768px) {
+	.center-content{
+		padding: 20px
+	}
+
+  }
