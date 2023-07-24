@@ -13,7 +13,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 	<title>Amigo</title>
-
+	<link rel="icon" type="image/x-icon" href="/inc_files/images/favicon.png">
 </head>
 
 <body>
@@ -37,31 +37,41 @@
 				</div>
 				<div id="search-box-wrapper">
 					<div id="search-box">
-						<form>
-							<div class="row">
-								<div class="col-10">
-									<input type="text" name="email-address"
-										value="Please enter your email for latest updates ..." id="email-hear" />
-								</div>
-								<div class="col-2">
-									<input type="button" value="" id="button" />
+						<form method="post" action="subscribe_newsletter.php">
+							<div class="input-group mb-3">
+								<div class="row m-0 w-100">
+									<div class="col">
+										<input type="email" name="email-address"
+											placeholder="Please enter your email for latest updates ..." id="email-hear"
+											required>
+									</div>
+									<div class="col-auto my-auto">
+										<button type="submit" class="btn btn-primary" id="subscribe-button">
+											<img src="inc_files/images/plus-icon.png" alt="Plus Icon" />
+										</button>
+									</div>
 								</div>
 							</div>
 						</form>
+
 					</div>
 				</div>
 				<div id="contact-us" class="mb-4">
-					<a href="#">
+					<!-- Contact Button trigger modal -->
+					<a type="button" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">
 						<p>CONTACT US</p>
 						<img id="contact-icon" src="inc_files/images/contact-icon.png" alt="contact-icon" />
 					</a>
+
 				</div>
 			</div><!--content-wrapper end-->
 		</div>
 
 		<div id="footer-wrapper">
 			<div id="footer-left">
-				<p>Amigo Coming Soon Template COPYRIGHT &copy; 2013 | Amigo</p>
+				<p>Amigo Coming Soon Template COPYRIGHT &copy;
+					<script>document.write(new Date().getFullYear())</script> | Amigo
+				</p>
 			</div>
 
 			<div id="footer-right">
@@ -72,6 +82,41 @@
 				<a href="#"><img src="inc_files/images/youtube-icon.png" alt="youtube-icon" /></a>
 			</div>
 		</div><!--footer-wrapper end-->
+		<!-- Contact Modal -->
+		<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content rounded-3">
+					<div class="modal-header bg-lgreen text-white">
+						<h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form id="contactForm" action="/submit_contact_form.php" method="post">
+							<div class="mb-3">
+								<label for="name" class="form-label">Name</label>
+								<input type="text" class="form-control" id="name" name="name" required>
+							</div>
+							<div class="mb-3">
+								<label for="email" class="form-label">Email</label>
+								<input type="email" class="form-control" id="email" name="email" required>
+							</div>
+							<div class="mb-3">
+								<label for="message" class="form-label">Message</label>
+								<textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+							</div>
+							<div class="d-grid gap-2">
+								<button type="submit" form="contactForm" class="btn btn-lgreen btn-block">Send
+									Message</button>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer bg-light">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 
 	</div><!--main-wrapper-->
 
